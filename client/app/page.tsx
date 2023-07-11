@@ -1,4 +1,5 @@
-import MusicCard from "@/components/MusicCard"
+
+import ListCard from "@/components/ListCard"
 import { api } from "@/services/api"
 import { MusicsProps } from "@/types"
 
@@ -8,13 +9,9 @@ const Home = async () =>{
   const musics = response.data
 
   return (
-    <main>
-      <ul>
-      {musics.map((music) => (
-        <MusicCard key={music.id} music={music}/>
-        ))}
-      </ul>
-    </main>
+    <>
+      <ListCard musics={musics}/>
+    </>
   )
 }
 
