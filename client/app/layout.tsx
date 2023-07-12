@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+
 import '../scss/main.scss'
+import PlayerProvider from '@/context/playerContext'
+
+import styles from './styles.module.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,8 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main>
-          {children}
+        <main className={styles.container}>
+          <PlayerProvider>
+            {children}
+          </PlayerProvider>
         </main>
       </body>
     </html>

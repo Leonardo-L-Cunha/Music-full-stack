@@ -1,0 +1,77 @@
+@use 'abstracts' as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 0.5rem;
+
+  border-top: 3px solid $color-pink-900;
+  background-color: $color-blue-900;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+  }
+
+  button:nth-child(2) {
+    color: $color-pink-500;
+  }
+}
+
+.playerScroll {
+  width: 60rem;
+  height: 0.7rem;
+  appearance: none;
+  border-radius: 0.5rem;
+  background: $color-gray-400;
+  background-image: linear-gradient($color-pink-600,$color-pink-600);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+  }
+
+  &:hover {
+    background-image: linear-gradient($color-pink-800,$color-pink-800);
+
+    &::-webkit-slider-thumb {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background: $color-pink-800;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background: $color-pink-800;
+      cursor: pointer;
+    }
+  }
+}
+
+.containerProgress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  color: $color-gray-400;
+  font-size: 1.5rem;
+}

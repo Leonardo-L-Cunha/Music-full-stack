@@ -1,7 +1,10 @@
+'use client'
 
 import { MusicsProps } from "@/types"
 import MusicCard from "../MusicCard"
 import styles from './styles.module.scss'
+import { useEffect } from "react"
+import { usePlayer } from "@/hooks/usePlayer"
 
 interface ListMusicsProps {
     musics: MusicsProps[]
@@ -9,6 +12,11 @@ interface ListMusicsProps {
 
 
 const ListCard = ({musics}: ListMusicsProps) => {
+    const {setPlayList} = usePlayer()
+    useEffect(() =>{
+        setPlayList(musics)
+    },[musics, setPlayList])
+    
     return (
         <>
           <ul className={styles.list}>
