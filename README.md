@@ -2,6 +2,10 @@
 
 Bem-vindo ao **MusicApp**, uma aplicação de música interativa e envolvente, onde você pode desfrutar de suas músicas favoritas. O projeto é dividido em um front-end feito em **Next.js 13** com estilização utilizando **SCSS** e um back-end desenvolvido com **NestJS**, integrando **PostgreSQL** e **Prisma** para gerenciamento de dados.
 
+
+### Link do Deploy :https://musicapp-eta.vercel.app/
+
+
 ## Funcionalidades Atuais
 
 - Reprodução de músicas: Dê play, pause e pule para a próxima música.
